@@ -18,3 +18,4 @@ main { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
 form.qa label { display: block; margin: 8px 0; font: 14px system-ui, sans-serif; }
 form.qa input, form.qa select { width: 100%; padding: 6px; font: inherit; }
 footer { padding: 24px; background: #17324d; color: #e8dcc4; font: 13px system-ui, sans-serif; }
+h1, h2 { overflow-wrap: anywhere; }
