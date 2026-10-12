@@ -11,7 +11,7 @@ Every page reads `?app=<app url>&map=<map id>&lang=<de|en|…>&cbid=<Cookiebot i
 | `script-tag.html` | one-tag snippet mid-page, plus a second one 1600 px below the fold |
 | `container.html` | tag in `<head>`, empty `data-hotelmapy-embed` div in the body |
 | `consent-tool.html` | two-part snippet held back by Klaro (no account) |
-| `cookiebot.html` | two-part snippet held back by Cookiebot (needs `COOKIEBOT_ID` in `site.js` or `?cbid=`) |
+| `cookiebot.html` | two-part snippet held back by Cookiebot (account of bastian.brandt@brainbox.software; ID in `COOKIEBOT_ID`, `site.js`) |
 | `click-to-load.html` | one-tag snippet for a map set to Click to load |
 | `iframe.html` | hand-written iframe of `<app>/<lang>/<map>` |
 | `legacy.html` | Atlantik's live markup: `hotelmapy-min.js` in `<head>`, four divs with legacy type strings |

@@ -5,7 +5,7 @@
 (function () {
   // The Cookiebot domain group ID of the account that has this site's domain
   // registered. It is public: Cookiebot's loader carries it in every page.
-  var COOKIEBOT_ID = "";
+  var COOKIEBOT_ID = "cdbc5bbf-1c6e-42fd-b6da-1ba744a20541";
   var DEFAULTS = { app: "https://hotelmapy.osc-fr1.scalingo.io", map: "", lang: "de", cbid: COOKIEBOT_ID };
   var query = new URLSearchParams(location.search);
   var settings = {};
