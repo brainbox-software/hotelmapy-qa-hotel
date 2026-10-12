@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurant – Hotel Seeblick</title>
+<link rel="stylesheet" href="site.css">
+<script src="site.js"></script>
+<script>
+  // Klaro (open source, no account): one service, off until the visitor agrees.
+  window.klaroConfig = {
+    storageMethod: "cookie",
+    cookieName: "qa-klaro",
+    lang: QA.settings.lang === "en" ? "en" : "de",
+    mustConsent: false,
+    acceptAll: true,
+    services: [{ name: "hotelmapy", title: "Hotelmapy (Google Maps)", purposes: ["marketing"] }],
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/klaro@0.7.22/dist/klaro.js"></script>
+</head>
+<body>
+<script>QA.header()</script>
+<div class="hero"><h1>Restaurant</h1></div>
+<main>
+  <p class="filler">The two-part snippet from the cookie-tool guide ("other tool" row): the empty div marks the place, the blocked tag fills it once Klaro releases it. Reject first, then accept via "Cookie settings" below.</p>
+  <script>QA.paste('<div data-hotelmapy-embed data-hotel-id="{MAP}"></div>\n<script type="text/plain" data-type="text/javascript" data-name="hotelmapy"\n  data-src="{APP}/embed/hotelmapy.js" data-hotel-id="{MAP}" data-height="600px"><\/script>')</script>
+  <p><button onclick="klaro.show()">Cookie settings</button></p>
+</main>
+<footer>Hotel Seeblick · not a real hotel</footer>
+</body>
+</html>

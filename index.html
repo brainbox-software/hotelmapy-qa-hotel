@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotel Seeblick Teststadt</title>
+<link rel="stylesheet" href="site.css">
+<script src="site.js"></script>
+</head>
+<body>
+<script>QA.header()</script>
+<div class="hero"><h1>Willkommen im Hotel Seeblick</h1></div>
+<main>
+  <p class="filler">A made-up hotel on a third-party origin, for the Hotelmapy test campaigns (#638). Each page in the menu embeds the map one way, the way a hotelier or their agency would paste it.</p>
+
+  <h2>QA settings</h2>
+  <form class="qa" method="get">
+    <label>App URL <input name="app" id="app"></label>
+    <label>Map id <input name="map" id="map" placeholder="uuid from the admin's Embed dialog"></label>
+    <label>Page language (&lt;html lang&gt;)
+      <select name="lang" id="lang"><option>de</option><option>en</option><option>fr</option></select>
+    </label>
+    <button>Save</button>
+  </form>
+  <script>
+    document.getElementById("app").value = QA.settings.app;
+    document.getElementById("map").value = QA.settings.map;
+    document.getElementById("lang").value = QA.settings.lang;
+  </script>
+
+  <h2>Pages</h2>
+  <ul>
+    <li><a href="script-tag.html">One-tag snippet</a> — the admin's snippet mid-page, plus a second one far below the fold (lazy loading, two frames on one page, fullscreen).</li>
+    <li><a href="container.html">Container div</a> — the tag in &lt;head&gt;, the empty <code>data-hotelmapy-embed</code> div in the body.</li>
+    <li><a href="consent-tool.html">Behind Klaro</a> — the two-part snippet, held back by Klaro until the visitor agrees.</li>
+    <li><a href="cookiebot.html">Behind Cookiebot</a> — the same snippet the guide gives for Cookiebot, held back until the visitor allows marketing cookies.</li>
+    <li><a href="click-to-load.html">Click to load</a> — the one-tag snippet for a map set to "Click to load"; the remembered click across pages and reloads.</li>
+    <li><a href="iframe.html">Raw iframe</a> — the public map URL in a hand-written iframe.</li>
+    <li><a href="legacy.html">Legacy snippet</a> — the Atlantik markup as it sits on the hotel's site today: one loader, four divs with legacy type strings.</li>
+  </ul>
+</main>
+<footer>Hotel Seeblick · Teststraße 1 · 27568 Teststadt · not a real hotel</footer>
+</body>
+</html>
