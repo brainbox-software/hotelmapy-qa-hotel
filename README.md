@@ -18,4 +18,4 @@ Every page reads `?app=<app url>&map=<map id>&lang=<de|en|…>&cbid=<Cookiebot i
 
 Run locally: `python3 -m http.server 3005`, then open `http://127.0.0.1:3005/?map=<id>`.
 
-Checks (system Chrome, no sandbox): `npm install`, then `CHROME_PATH=/opt/google/chrome/chrome node checks/shoot.mjs <site> <app> <map> <outDir>` (every page at 1280 and 390) and `node checks/klaro-check.mjs <site> <app> <map>`.
+Checks (system Chrome, no sandbox): `npm install`, then `CHROME_PATH=/opt/google/chrome/chrome node checks/shoot.mjs <site> <app> <map> <outDir>` (every page at 1280 and 390) , `node checks/klaro-check.mjs <site> <app> <map>` and `node checks/cookiebot-check.mjs <site> <app> <map> [outDir]` (deny, then allow: 0 → 0 → 1 → 1 after reload).
